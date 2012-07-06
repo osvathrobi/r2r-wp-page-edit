@@ -8,6 +8,8 @@ License: GPLv2 or later
 
 Build up your pages in WordPress from multiple content elements blocks.
 
-== Description ==
+== Screenshots ==
 
-Something
+http://ready2run.ro/r2r-wp-page-edit/r2r-wp-page-edit.jpg
+
+http://ready2run.ro/r2r-wp-page-edit/r2r-wp-page-edit-2.jpg
