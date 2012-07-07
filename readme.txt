@@ -1,10 +1,15 @@
-=== R2R Wordpress Page Edit ===
+R2R Wordpress Page Edit
+-----------------------------------------
+
 Contributors: robert
 
 Requires at least: 3.0
 Tested up to: 3.1
 Stable tag: 2.5.3
 License: GPLv2 or later
+
+Description
+-----------------------------------------
 
 Build up your pages in WordPress from multiple content elements blocks. The result becomes a list of nested shortcodes which you can interpret in your theme.
 
@@ -14,7 +19,8 @@ Example interpretation in the theme:
 http://ready2run.ro/r2r-wp-page-edit/r2r-wp-page-edit-3.jpg
 
 
-== Screenshots ==
+Screenshots
+-----------------------------------------
 
 http://ready2run.ro/r2r-wp-page-edit/r2r-wp-page-edit.jpg
 
