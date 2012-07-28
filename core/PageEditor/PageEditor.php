@@ -58,13 +58,6 @@ class PageEditor {
 	function page_editor_html() {
 		$this->template1 = new PhpTemplate(ext_pe . 'templates/template_blank.php');
 
-		// TODO: get this block into config
-		///$this->subs ['row'] = new PhpTemplate(ext_pe . 'templates/sub_row.php');
-		///$this->subs ['1_column']= new PhpTemplate(ext_pe . 'templates/sub_layout_1_column.php');
-		///$this->subs ['2_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_2_columns.php');
-		///$this->subs ['3_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_3_columns.php');
-		///$this->subs ['left_sidebar']= new PhpTemplate(ext_pe . 'templates/sub_layout_left_sidebar.php');
-		
                 $this->subs['row'] = new PhpTemplate(ext_pe . PageEditorConfig::$ui_row);
                 
                 // Read Row Layouts from config
@@ -78,11 +71,6 @@ class PageEditor {
                     $this->subs['module_' . $name . '_editor'] = new PhpTemplate(ext_pe . $ce['editor']);                    
                 }
                 
-                ///$this->subs ['module_text']= new PhpTemplate(ext_pe . 'templates/sub_module_text.php');
-		///$this->subs ['module_heading']= new PhpTemplate(ext_pe . 'templates/sub_module_heading.php');
-		///$this->subs ['module_heading_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_heading_editor.php');
-		///$this->subs ['module_text_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_text_editor.php');
-		
 		$this->ctx['sub_templates'] = $this->convertToJSTemplate($this->subs);
 
 		echo $this->template1->render($this->ctx);
@@ -91,13 +79,6 @@ class PageEditor {
 	function page_editor_html_templatesonly() {
 		$this->template1 = new PhpTemplate(ext_pe . 'templates/template_only_header.php');
 
-		// TODO: get this block into config
-		///$this->subs ['row'] = new PhpTemplate(ext_pe . 'templates/sub_row.php');
-		///$this->subs ['1_column']= new PhpTemplate(ext_pe . 'templates/sub_layout_1_column.php');
-		///$this->subs ['2_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_2_columns.php');
-		///$this->subs ['3_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_3_columns.php');
-		///$this->subs ['left_sidebar']= new PhpTemplate(ext_pe . 'templates/sub_layout_left_sidebar.php');
-		
                 $this->subs['row'] = new PhpTemplate(ext_pe . PageEditorConfig::$ui_row);
                 
                 // Read Row Layouts from config
@@ -110,11 +91,7 @@ class PageEditor {
                     $this->subs['module_' . $name] = new PhpTemplate(ext_pe . $ce['module']);
                     $this->subs['module_' . $name . '_editor'] = new PhpTemplate(ext_pe . $ce['editor']);                    
                 }
-                ///$this->subs ['module_text']= new PhpTemplate(ext_pe . 'templates/sub_module_text.php');
-		///$this->subs ['module_heading']= new PhpTemplate(ext_pe . 'templates/sub_module_heading.php');
-		///$this->subs ['module_heading_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_heading_editor.php');
-		///$this->subs ['module_text_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_text_editor.php');
-
+                
 		$this->ctx['sub_templates'] = $this->convertToJSTemplate($this->subs);
 
 		echo $this->template1->render($this->ctx);
