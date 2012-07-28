@@ -199,6 +199,8 @@
 	height:96px;
 	display:block;	
 	float:left;
+        
+        margin-right:15px;
 }
 
 .pe_layout_1_column {
