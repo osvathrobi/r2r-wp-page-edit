@@ -23,5 +23,25 @@ class PageEditorConfig {
             'button_class' => 'pe_ce_heading'
         )
     );
+    public static $row_layouts = array(
+        '1_column' => array(
+            'module' => 'templates/sub_layout_1_column.php',
+            'button_class' => 'pe_layout_1_column'
+        ),
+        '2_column' => array(
+            'module' => 'templates/sub_layout_2_columns.php',
+            'button_class' => 'pe_layout_2_columns'
+        ),
+        '3_column' => array(
+            'module' => 'templates/sub_layout_3_columns.php',
+            'button_class' => 'pe_layout_3_columns'
+        ),
+        'left_sidebar' => array(
+            'module' => 'templates/sub_layout_left_sidebar.php',
+            'button_class' => 'pe_layout_left_sidebar'
+        )
+    );
+    public static $ui_row = 'templates/sub_row.php';
+        
 
 }

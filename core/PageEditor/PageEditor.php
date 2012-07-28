@@ -59,12 +59,19 @@ class PageEditor {
 		$this->template1 = new PhpTemplate(ext_pe . 'templates/template_blank.php');
 
 		// TODO: get this block into config
-		$this->subs ['row'] = new PhpTemplate(ext_pe . 'templates/sub_row.php');
-		$this->subs ['1_column']= new PhpTemplate(ext_pe . 'templates/sub_layout_1_column.php');
-		$this->subs ['2_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_2_columns.php');
-		$this->subs ['3_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_3_columns.php');
-		$this->subs ['left_sidebar']= new PhpTemplate(ext_pe . 'templates/sub_layout_left_sidebar.php');
+		///$this->subs ['row'] = new PhpTemplate(ext_pe . 'templates/sub_row.php');
+		///$this->subs ['1_column']= new PhpTemplate(ext_pe . 'templates/sub_layout_1_column.php');
+		///$this->subs ['2_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_2_columns.php');
+		///$this->subs ['3_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_3_columns.php');
+		///$this->subs ['left_sidebar']= new PhpTemplate(ext_pe . 'templates/sub_layout_left_sidebar.php');
 		
+                $this->subs['row'] = new PhpTemplate(ext_pe . PageEditorConfig::$ui_row);
+                
+                // Read Row Layouts from config
+                foreach(PageEditorConfig::$row_layouts as $name => $rl) {
+                    $this->subs['rowlayout_' . $name] = new PhpTemplate(ext_pe . $rl['module']);                
+                }
+                
                 // Read ContentElements from config
                 foreach(PageEditorConfig::$content_elements as $name => $ce) {
                     $this->subs['module_' . $name] = new PhpTemplate(ext_pe . $ce['module']);
@@ -85,12 +92,19 @@ class PageEditor {
 		$this->template1 = new PhpTemplate(ext_pe . 'templates/template_only_header.php');
 
 		// TODO: get this block into config
-		$this->subs ['row'] = new PhpTemplate(ext_pe . 'templates/sub_row.php');
-		$this->subs ['1_column']= new PhpTemplate(ext_pe . 'templates/sub_layout_1_column.php');
-		$this->subs ['2_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_2_columns.php');
-		$this->subs ['3_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_3_columns.php');
-		$this->subs ['left_sidebar']= new PhpTemplate(ext_pe . 'templates/sub_layout_left_sidebar.php');
+		///$this->subs ['row'] = new PhpTemplate(ext_pe . 'templates/sub_row.php');
+		///$this->subs ['1_column']= new PhpTemplate(ext_pe . 'templates/sub_layout_1_column.php');
+		///$this->subs ['2_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_2_columns.php');
+		///$this->subs ['3_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_3_columns.php');
+		///$this->subs ['left_sidebar']= new PhpTemplate(ext_pe . 'templates/sub_layout_left_sidebar.php');
 		
+                $this->subs['row'] = new PhpTemplate(ext_pe . PageEditorConfig::$ui_row);
+                
+                // Read Row Layouts from config
+                foreach(PageEditorConfig::$row_layouts as $name => $rl) {
+                    $this->subs['rowlayout_' . $name] = new PhpTemplate(ext_pe . $rl['module']);                
+                }
+                
                 // Read ContentElements from config
                 foreach(PageEditorConfig::$content_elements as $name => $ce) {
                     $this->subs['module_' . $name] = new PhpTemplate(ext_pe . $ce['module']);

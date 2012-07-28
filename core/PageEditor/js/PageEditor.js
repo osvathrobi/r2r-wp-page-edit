@@ -5,8 +5,8 @@ var PageEditor = {
 
         PageEditor.liveAction();
 
-        var v1 = PageEditor.addNewLayout(PageEditor.addNewRow('main_ul'), 'tmpl_1_column');
-        PageEditor.addNewModule('zone1', v1, 'tmpl_module_text_block');
+        var v1 = PageEditor.addNewLayout(PageEditor.addNewRow('main_ul'), 'tmpl_rowlayout_1_column');
+        //PageEditor.addNewModule('zone1', v1, 'tmpl_module_text_block');
 
         //var v3 = PageEditor.addNewLayout(PageEditor.addNewRow('main_ul'), 'tmpl_3_columns');
         //PageEditor.addNewModule('zone1', v3, 'tmpl_module_text');

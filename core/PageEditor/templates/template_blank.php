@@ -27,11 +27,12 @@
 </script>
 
 <script type="text/html" id="pe_dialogs">
-    <div id="dialog_add_row" class="ui-dialog-content ui-widget-content formloadhide" title="Add new row">
-        <a href="javascript:" class="pe_ce_icon_96p pe_layout_1_column new_row_layout" id="tmpl_1_column"></a>
-        <a href="javascript:" class="pe_ce_icon_96p pe_layout_2_columns new_row_layout" id="tmpl_2_columns"></a>
-        <a href="javascript:" class="pe_ce_icon_96p pe_layout_3_columns new_row_layout" id="tmpl_3_columns"></a>
-        <a href="javascript:" class="pe_ce_icon_96p pe_layout_left_sidebar new_row_layout" id="tmpl_left_sidebar"></a>
+    <div id="dialog_add_row" class="ui-dialog-content ui-widget-content formloadhide" title="Add new row">        
+        <?php
+        foreach (PageEditorConfig::$row_layouts as $name => $rl) {
+            echo '<a href="javascript:" class="pe_ce_icon_96p '.$rl['button_class'].' new_row_layout" id="tmpl_rowlayout_'.$name.'"></a>';
+        }
+        ?>
     </div>
 
     <div id="dialog_add_ce" class="ui-dialog-content ui-widget-content formloadhide" title="Add new content element">
