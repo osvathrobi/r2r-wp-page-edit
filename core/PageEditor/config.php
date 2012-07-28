@@ -2,7 +2,12 @@
 
 define("ext_pe", plugin_dir_path(__FILE__) . '');
 
-// listing
+//  Content Elements configuration
+//  
+//  [name]  =>  [module] - The module template for listing
+//              [editor] - The editor template for manipulating
+//              [button_class] - Button class to use on the "Add new CE" form
+
 
 class PageEditorConfig {
 
