@@ -64,10 +64,17 @@ class PageEditor {
 		$this->subs ['2_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_2_columns.php');
 		$this->subs ['3_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_3_columns.php');
 		$this->subs ['left_sidebar']= new PhpTemplate(ext_pe . 'templates/sub_layout_left_sidebar.php');
-		$this->subs ['module_text']= new PhpTemplate(ext_pe . 'templates/sub_module_text.php');
-		$this->subs ['module_heading']= new PhpTemplate(ext_pe . 'templates/sub_module_heading.php');
-		$this->subs ['module_heading_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_heading_editor.php');
-		$this->subs ['module_text_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_text_editor.php');
+		
+                // Read ContentElements from config
+                foreach(PageEditorConfig::$content_elements as $name => $ce) {
+                    $this->subs['module_' . $name] = new PhpTemplate(ext_pe . $ce['module']);
+                    $this->subs['module_' . $name . '_editor'] = new PhpTemplate(ext_pe . $ce['editor']);                    
+                }
+                
+                ///$this->subs ['module_text']= new PhpTemplate(ext_pe . 'templates/sub_module_text.php');
+		///$this->subs ['module_heading']= new PhpTemplate(ext_pe . 'templates/sub_module_heading.php');
+		///$this->subs ['module_heading_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_heading_editor.php');
+		///$this->subs ['module_text_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_text_editor.php');
 		
 		$this->ctx['sub_templates'] = $this->convertToJSTemplate($this->subs);
 
@@ -83,10 +90,16 @@ class PageEditor {
 		$this->subs ['2_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_2_columns.php');
 		$this->subs ['3_columns']= new PhpTemplate(ext_pe . 'templates/sub_layout_3_columns.php');
 		$this->subs ['left_sidebar']= new PhpTemplate(ext_pe . 'templates/sub_layout_left_sidebar.php');
-		$this->subs ['module_text']= new PhpTemplate(ext_pe . 'templates/sub_module_text.php');
-		$this->subs ['module_heading']= new PhpTemplate(ext_pe . 'templates/sub_module_heading.php');
-		$this->subs ['module_heading_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_heading_editor.php');
-		$this->subs ['module_text_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_text_editor.php');
+		
+                // Read ContentElements from config
+                foreach(PageEditorConfig::$content_elements as $name => $ce) {
+                    $this->subs['module_' . $name] = new PhpTemplate(ext_pe . $ce['module']);
+                    $this->subs['module_' . $name . '_editor'] = new PhpTemplate(ext_pe . $ce['editor']);                    
+                }
+                ///$this->subs ['module_text']= new PhpTemplate(ext_pe . 'templates/sub_module_text.php');
+		///$this->subs ['module_heading']= new PhpTemplate(ext_pe . 'templates/sub_module_heading.php');
+		///$this->subs ['module_heading_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_heading_editor.php');
+		///$this->subs ['module_text_editor']= new PhpTemplate(ext_pe . 'templates/sub_module_text_editor.php');
 
 		$this->ctx['sub_templates'] = $this->convertToJSTemplate($this->subs);
 

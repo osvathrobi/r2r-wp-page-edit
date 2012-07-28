@@ -13,6 +13,7 @@ $path = plugin_dir_path(__FILE__);
 
 require_once($path . 'core.inc.php');
 
+require_once($path . 'core/PageEditor/config.php');
 require_once($path . 'core/PageEditor/PageEditor.php');
 $pe = new PageEditor();
 
