@@ -152,7 +152,7 @@ var PageEditor = {
         PageEditor.addNewModule(PageEditor.prependZone, PageEditor.prependContainer, tmpl);
     },
     showEditCE : function(obj) {
-        CEEditor.showEditDialog(obj.attr('id'), obj.attr('type'));
+        PageEditorCEEditor.showEditDialog(obj.attr('id'), obj.attr('type'));
     },
     showRowOptionsDialog : function(obj) {
         // set up position
@@ -347,7 +347,7 @@ var PageEditorLoader = {
     init : function() {
         if (initModule == 'editor') {
             PageEditorDialogs.init();
-            CEEditor.init();
+            PageEditorCEEditor.init();
             PageEditor.init();
         } else {
             if (initModule == 'list') {
@@ -405,7 +405,7 @@ var PageEditorLoader = {
                             $('#post-status-info').after('<div id="pe_container"><ul id="main_ul"></ul></div>');
 
                             PageEditorDialogs.init();
-                            CEEditor.init();
+                            PageEditorCEEditor.init();
                             PageEditor.init();
                             PageEditorLoader.already_initialized = true;
                         } else {
@@ -420,30 +420,5 @@ var PageEditorLoader = {
     }
 };
 
-var CEEditor = {
-    init : function() {
-        $('#main_ul').after($('#pe_ce_editor_dialogs').html());
-
-        CEEditor.ceEditDialog = $('#dialog_ce_edit').dialog({
-            /*width : '70%',*/
-            height : '400',
-            modal : true,
-            autoOpen : false,
-            close : function(event, ui) {
-                $("body").css("overflow", "auto"); // unlock the screen scroll
-            },
-            open : function(event, ui) {
-                $("body").css("overflow", "hidden"); // lock the screen
-                // scroll
-            }
-        });
-    },
-    showEditDialog : function(ce_module_id, ce_type) {
-        
-        var cnt = $('#tmpl_module_' + ce_type + "_editor").html();
-        $('#dialog_ce_edit').html(cnt);
-        CEEditor.ceEditDialog.dialog('open');
-    }
-};
 
 $(PageEditorLoader.init);

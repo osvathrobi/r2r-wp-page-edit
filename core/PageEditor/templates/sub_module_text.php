@@ -1,5 +1,5 @@
 <!-- Module -->
-<div class="pe_ce_container widefat pe_type_module" type="text" id="<%=content.id%>">
+<div class="pe_ce_container widefat pe_type_module" type="text_block" id="<%=content.id%>">
     <div class="pe_ce_container_left">
         <div class="pe_pad">	
             <div class="pe_ce_icon pe_ce_icon_TEXT">Rich Text</div>

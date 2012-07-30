@@ -32,7 +32,7 @@ class PageEditor {
 		echo '<script src="'.$base_url.'core/PageEditor/js/PageEditor.js"></script>';
 		echo '<script src="'.$base_url.'core/PageEditor/js/PageEditorDialogs.js"></script>';
 		echo '<script src="'.$base_url.'core/PageEditor/js/Serializer.js"></script>';
-
+                echo '<script src="'.$base_url.'core/PageEditor/js/PageEditorCEEditor.js"></script>';
 		
 		if($_GET['page']==pe_prepend) { 
 			$v = 'editor'; 

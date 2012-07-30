@@ -1,5 +1,5 @@
 <!-- Module -->
-<div class="pe_ce_container widefat pe_type_module" type="heading" id="<%=content.id%>">
+<div class="pe_ce_container widefat pe_type_module" type="heading_block" id="<%=content.id%>">
     <div class="pe_ce_container_left">
         <div class="pe_pad">	
             <div class="pe_ce_icon pe_ce_icon_HEADING">Heading</div>
