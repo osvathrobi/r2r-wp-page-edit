@@ -34,6 +34,10 @@ class PageEditor {
 		echo '<script src="'.$base_url.'core/PageEditor/js/Serializer.js"></script>';
                 echo '<script src="'.$base_url.'core/PageEditor/js/PageEditorCEEditor.js"></script>';
 		
+                // Load current pagecontent and De-Serielize for UI
+                $p = get_post($_GET['post']);
+                $this->deSerialize($p->post_content);
+                
 		if($_GET['page']==pe_prepend) { 
 			$v = 'editor'; 
 		} else { 
@@ -216,6 +220,16 @@ class PageEditor {
 		return $retv;
 	}
 
+        function deSerialize($content) {
+            echo $content;
+            $arr = array();
+            preg_match_all('/\[.*\]/', $content, $arr);
+            
+            foreach($arr[0] as $item) {
+                
+            }
+        }
+        
 	function getLayoutOutputClassName($id, $zone) {
 		switch($id) {
 			case '1_column':
