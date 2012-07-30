@@ -14,7 +14,8 @@
     <div class="pe_ce_container_right">
         <div class="pe_pad pe_ce_content">	
             <span class="pe_label pe_type_param pe_ce_heading_content">
-                <strong>Heading: </strong> Hello world
+                <strong>Heading: </strong> 
+                <span class="pe_ce_field_1 pe_ce_data">Hello world</span>
             </span>
 
             <p class="pe_content">

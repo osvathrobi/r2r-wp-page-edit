@@ -6,7 +6,7 @@ var PageEditor = {
         PageEditor.liveAction();
 
         var v1 = PageEditor.addNewLayout(PageEditor.addNewRow('main_ul'), 'tmpl_rowlayout_1_column');
-        PageEditor.addNewModule('zone1', v1, 'tmpl_module_text_block');
+        PageEditor.addNewModule('zone1', v1, 'tmpl_module_heading_block');
 
         PageEditor.addNewRowButton(PageEditor.addNewRow('main_ul'));
 

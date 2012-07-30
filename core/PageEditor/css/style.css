@@ -309,3 +309,18 @@
 
 	background-color:#E9E9E9;
 }
+
+
+/* EDITING FORMS */
+
+.align_right {
+    text-align:right;
+}
+.editing_form input[type=text] {
+    width:100%;
+}
+
+.editing_form input[type=submit], .editing_form input[type=button] {
+    padding:6px;
+    min-width:100px;
+}
