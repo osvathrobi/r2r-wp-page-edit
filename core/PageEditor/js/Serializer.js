@@ -41,7 +41,7 @@ var Serializer = {
         }
 
         if (id.hasClass('pe_type_param')) {
-            s += '[PEmoduleParam type="' + id.attr('id') + '"]';
+            s += '[PEmoduleParam type="' + id.attr('type') + '"]';
             s += id.html();
         }
         

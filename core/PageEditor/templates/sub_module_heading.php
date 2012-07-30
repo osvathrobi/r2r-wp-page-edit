@@ -13,9 +13,9 @@
     </div>
     <div class="pe_ce_container_right">
         <div class="pe_pad pe_ce_content">	
-            <span class="pe_label pe_type_param pe_ce_heading_content">
+            <span class="pe_label pe_ce_heading_content">
                 <strong>Heading: </strong> 
-                <span class="pe_ce_field_1 pe_ce_data">Some heading</span>
+                <span class="pe_ce_field_1 pe_ce_data pe_type_param" type="param_heading">Some heading</span>
             </span>
 
             <p class="pe_content">
