@@ -41,7 +41,7 @@ var PageEditor = {
     },
     addNewModuleButton : function(el) {
         var el_id = 'btn_' + PageEditor.generateUID();
-        $('#' + el).append(PageEditor.wrapInPad('<a href="javascript:" class="button add_new_module">Add new Module</a>', 'pe_add_new_ce_button'));
+        $('#' + el).append(PageEditor.wrapInPad('<a href="javascript:" class="button add_new_module">Add new Content Element</a>', 'pe_add_new_ce_button'));
         return el_id;
     },
     addNewLayout : function(el, layout_id) {
