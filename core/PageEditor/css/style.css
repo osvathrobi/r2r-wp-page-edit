@@ -324,3 +324,8 @@
     padding:6px;
     min-width:100px;
 }
+
+.editing_form textarea {
+    width:100%;
+    height:150px;
+}

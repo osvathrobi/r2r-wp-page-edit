@@ -14,13 +14,11 @@
     <div class="pe_ce_container_right">
         <div class="pe_pad pe_ce_content">	
             <span class="pe_label pe_type_param pe_ce_text_title"><strong>Title:</strong> 
-                <span class="pe_ce_field_1 pe_ce_data">Hello world</span>
+                <span class="pe_ce_field_1 pe_ce_data">Some title</span>
             </span>
 
             <p class="pe_content pe_type_param pe_ce_text_content">
-                <span class="pe_ce_field_2 pe_ce_data">
-                    Google Analytics is the enterprise-class web analytics solution that gives you rich insights into your website traffic and marketing effectiveness. 
-                </span>
+                <span class="pe_ce_field_2 pe_ce_data">Here is a long long long long, long long long long text!</span>
                 <!-- Powerful, flexible and easy-to-use features now let you see and analyze your traffic data in an entirely new way. With Google Analytics, you're more prepared to write better-targeted ads, strengthen your marketing initiatives and create higher converting websites.
                 -->
             </p>
