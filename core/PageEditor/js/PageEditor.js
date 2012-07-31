@@ -5,12 +5,18 @@ var PageEditor = {
 
         PageEditor.liveAction();
 
-        var v1 = PageEditor.addNewLayout(PageEditor.addNewRow('main_ul'), 'tmpl_rowlayout_1_column');
-        PageEditor.addNewModule('zone1', v1, 'tmpl_module_heading_block');
-        PageEditor.addNewModule('zone1', v1, 'tmpl_module_text_block');
+        if(currentContentDataXML.xmldata) {
+            PageEditorWorkspaceLoader.loadWorkspace(currentContentDataXML.xmldata)
+        } else {
+        
+            var v1 = PageEditor.addNewLayout(PageEditor.addNewRow('main_ul'), 'tmpl_rowlayout_1_column');
+            PageEditor.addNewModule('zone1', v1, 'tmpl_module_heading_block');
+            PageEditor.addNewModule('zone1', v1, 'tmpl_module_text_block');
 
-        PageEditor.addNewRowButton(PageEditor.addNewRow('main_ul'));
+        }
+        
 
+            PageEditor.addNewRowButton(PageEditor.addNewRow('main_ul'));
     },
     generateUID : function() {
         PageEditor.row_id++;
@@ -37,6 +43,7 @@ var PageEditor = {
         but += '&nbsp;&nbsp;<a href="javascript:" class="button serialize">Save</a>';
 
         $('#' + el).html(PageEditor.wrapInPad(but));
+        $('#' + el).addClass('pe_type_exclude');
         return el_id;
     },
     addNewModuleButton : function(el) {
@@ -105,7 +112,7 @@ var PageEditor = {
 
         }).live('mouseout', function() {
             // $('#pe_ce_options').hide();
-        });
+            });
 
         // setup 'paste here' icons
         $('.pe_paste_button').live('click', function() {
@@ -135,7 +142,7 @@ var PageEditor = {
             // $('.pe_ui_row').fadeTo(0,0.7);
             // $(this).fadeTo(0,1.0);
 
-        });
+            });
 
         $('.pe_ui_row').live('mouseover', function(ev) {
 
@@ -143,7 +150,7 @@ var PageEditor = {
             return false;
         }).live('mouseout', function() {
             // $('#pe_row_options').hide();
-        });
+            });
 
     },
     onAddRowDialogSelect : function(tmpl) {
@@ -340,7 +347,7 @@ var PageEditor = {
 
         // add new icons
         $('.pe_type_row').parent().after(tempHtml);
-        // $('.pe_add_new_ce_button').after(tempHtml);
+    // $('.pe_add_new_ce_button').after(tempHtml);
     }
 };
 

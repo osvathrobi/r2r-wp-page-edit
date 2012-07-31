@@ -1,7 +1,6 @@
 <?php
 require_once(plugin_dir_path(__FILE__) . 'core/libs/PhpTemplate.php');
 
-
 add_action('admin_head', add_jquery);
 
 function add_jquery() {
