@@ -27,6 +27,11 @@ class PageEditorConfig {
             'module' => 'templates/sub_module_heading.php',
             'editor' => 'templates/sub_module_heading_editor.php',
             'button_class' => 'pe_ce_heading'
+        ),
+        'divider_block' => array(
+            'module' => 'templates/sub_module_divider.php',
+            'editor' => '',
+            'button_class' => 'pe_ce_divider'
         )
     );
     public static $row_layouts = array(

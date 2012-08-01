@@ -228,7 +228,10 @@
 	background-image:url(../images/ce_heading.png);	
 	background-repeat:no-repeat;
 }
-
+.pe_ce_divider {
+	background-image:url(../images/ce_divider.png);	
+	background-repeat:no-repeat;
+}
 /* END CONTENT TYPES */
 
 

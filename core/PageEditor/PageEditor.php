@@ -75,7 +75,8 @@ class PageEditor {
         // Read ContentElements from config
         foreach (PageEditorConfig::$content_elements as $name => $ce) {
             $this->subs['module_' . $name] = new PhpTemplate(ext_pe . $ce['module']);
-            $this->subs['module_' . $name . '_editor'] = new PhpTemplate(ext_pe . $ce['editor']);
+            if ($ce['editor'] != '')
+                $this->subs['module_' . $name . '_editor'] = new PhpTemplate(ext_pe . $ce['editor']);
         }
 
         $this->ctx['sub_templates'] = $this->convertToJSTemplate($this->subs);
@@ -96,7 +97,8 @@ class PageEditor {
         // Read ContentElements from config
         foreach (PageEditorConfig::$content_elements as $name => $ce) {
             $this->subs['module_' . $name] = new PhpTemplate(ext_pe . $ce['module']);
-            $this->subs['module_' . $name . '_editor'] = new PhpTemplate(ext_pe . $ce['editor']);
+            if ($ce['editor'] != '')
+                $this->subs['module_' . $name . '_editor'] = new PhpTemplate(ext_pe . $ce['editor']);
         }
 
         $this->ctx['sub_templates'] = $this->convertToJSTemplate($this->subs);
@@ -230,7 +232,7 @@ class PageEditor {
 
         $content = str_replace('[', '<', $content);
         $content = str_replace(']', '>', $content);
-       
+
         echo $this->convertToJSVar('currentContentDataXML', array('xmldata' => $content));
     }
 
@@ -258,7 +260,6 @@ class PageEditor {
                 break;
         }
     }
-
 
 }
 
