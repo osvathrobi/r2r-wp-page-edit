@@ -15,9 +15,6 @@ Build up your pages in WordPress from multiple content elements blocks. The resu
 
 A page may containt multiple layout rows, each row multiple content elements.
 
-Example interpretation in the theme: 
-http://ready2run.ro/r2r-wp-page-edit/r2r-wp-page-edit-3.jpg
-
 
 Screenshots
 -----------------------------------------
@@ -25,3 +22,6 @@ Screenshots
 http://ready2run.ro/r2r-wp-page-edit/r2r-wp-page-edit.jpg
 
 http://ready2run.ro/r2r-wp-page-edit/r2r-wp-page-edit-2.jpg
+
+Example interpretation in the theme: 
+http://ready2run.ro/r2r-wp-page-edit/r2r-wp-page-edit-3.jpg
